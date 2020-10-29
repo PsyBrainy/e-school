@@ -29,6 +29,9 @@ public class Student {
     @OneToMany(mappedBy = "project")
     private List<Project> projectsDelivered;
 
+    public Student() {
+    }
+
     public Student(String name, String dni, String address, String mail, String phone, String comments, Parents parents, List<Project> projectsDelivered) {
         this.name = name;
         this.dni = dni;

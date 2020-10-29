@@ -10,6 +10,9 @@ public class Proyecto {
     private Date fechaLimite;
     private List<Alumno> alumnos;
 
+    public Proyecto() {
+    }
+
     public int getIdProyecto() {
         return idProyecto;
     }

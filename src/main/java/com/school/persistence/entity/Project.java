@@ -21,6 +21,9 @@ public class Project {
     @OneToMany(mappedBy = "students")
     private List<Student> students;
 
+    public Project() {
+    }
+
     public Project(Integer projectId, String nameProject, Date limitDate, Date fechaEntrega) {
         this.projectId = projectId;
         this.nameProject = nameProject;

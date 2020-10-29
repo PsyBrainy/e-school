@@ -11,13 +11,13 @@ import org.mapstruct.Mappings;
 public interface ParientesMapper {
 
     @Mappings({
-            @Mapping(source = "idParents" , target = "idParientes" ),
-            @Mapping(source = "nameFather" , target = "nombrePadre" ),
-            @Mapping(source = "nameMather" , target = "nombreMadre" ),
-            @Mapping(source = "emailFather" , target = "correoPadre" ),
-            @Mapping(source = "emailMather" , target = "correoMadre" ),
-            @Mapping(source = "comments" , target = "comentarios" ),
-            @Mapping(source = "student" , target = "alumno" )
+            @Mapping(source = "idParientes" , target = "idParents" ),
+            @Mapping(source = "nombrePadre" , target = "nameFather" ),
+            @Mapping(source = "nombreMadre" , target = "nameMather" ),
+            @Mapping(source = "correoPadre" , target = "emailFather" ),
+            @Mapping(source = "correoMadre" , target = "emailMather" ),
+            @Mapping(source = "comentarios" , target = "comments" ),
+            @Mapping(source = "alumno" , target = "student" )
     })
     Parents toParents(Parientes parientes);
 

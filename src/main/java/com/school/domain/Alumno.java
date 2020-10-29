@@ -15,6 +15,9 @@ public class Alumno {
     private Parientes parientes;
     private List<Proyecto> proyectos;
 
+    public Alumno() {
+    }
+
     public int getIdAlumno() {
         return idAlumno;
     }

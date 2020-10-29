@@ -23,6 +23,9 @@ public class Parents {
     @JoinColumn(name = "studentId")
     private Student student;
 
+    public Parents() {
+    }
+
     public Integer getIdParents() {
         return idParents;
     }

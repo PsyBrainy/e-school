@@ -10,6 +10,9 @@ public class Parientes {
     private String comentarios;
     private Alumno alumno;
 
+    public Parientes() {
+    }
+
     public int getIdParientes() {
         return idParientes;
     }
