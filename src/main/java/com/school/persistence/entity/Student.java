@@ -1,9 +1,6 @@
 package com.school.persistence.entity;
 
 
-import lombok.Data;
-
-
 import javax.persistence.*;
 import java.util.List;
 
