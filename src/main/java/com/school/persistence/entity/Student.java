@@ -23,13 +23,14 @@ public class Student {
     @JoinColumn(name = "parentsId", insertable = false, updatable = false)
     private Parents parents;
 
-    @OneToMany(mappedBy = "project")
+    @ManyToMany
+    @JoinColumn(name = "project", insertable = false, updatable = false)
     private List<Project> projectsDelivered;
 
     public Student() {
     }
 
-    public Student(String name, String dni, String address, String mail, String phone, String comments, Parents parents, List<Project> projectsDelivered) {
+    public Student(String name, String dni, String address, String mail, String phone, String comments, Parents parents) {
         this.name = name;
         this.dni = dni;
         this.address = address;
@@ -37,10 +38,9 @@ public class Student {
         this.phone = phone;
         this.comments = comments;
         this.parents = parents;
-        this.projectsDelivered = projectsDelivered;
     }
 
-    public Student(String name, String dni, String address, String mail, String phone, String comments, Integer prensence, Parents parents, List<Project> projectsDelivered) {
+    public Student(String name, String dni, String address, String mail, String phone, String comments, Integer prensence, Parents parents) {
         this.name = name;
         this.dni = dni;
         this.address = address;
@@ -49,10 +49,10 @@ public class Student {
         this.comments = comments;
         this.prensence = prensence;
         this.parents = parents;
-        this.projectsDelivered = projectsDelivered;
+
     }
 
-    public Student(Integer studentId, String name, String dni, String address, String mail, String phone, String comments, Integer prensence, List<Project> projectsDelivered) {
+    public Student(Integer studentId, String name, String dni, String address, String mail, String phone, String comments, Integer prensence) {
         this.studentId = studentId;
         this.name = name;
         this.dni = dni;
@@ -61,7 +61,6 @@ public class Student {
         this.phone = phone;
         this.comments = comments;
         this.prensence = prensence;
-        this.projectsDelivered = projectsDelivered;
     }
 
 
@@ -135,13 +134,5 @@ public class Student {
 
     public void setParents(Parents parents) {
         this.parents = parents;
-    }
-
-    public List<Project> getProjectsDelivered() {
-        return projectsDelivered;
-    }
-
-    public void setProjectsDelivered(List<Project> projectsDelivered) {
-        this.projectsDelivered = projectsDelivered;
     }
 }

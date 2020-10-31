@@ -16,7 +16,7 @@ public class ParentsRepository {
     }
 
     public Parents getByStudent(int studentId){
-        return parentsCrudRepository.findByStudent(studentId);
+        return parentsCrudRepository.findByIdParents(studentId);
     }
 
     public Parents save(Parents parents){

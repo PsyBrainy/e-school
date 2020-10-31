@@ -6,5 +6,5 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface ParentsCrudRepository extends CrudRepository<Parents,Integer> {
 
-    Parents findByStudent(int studentId);
+    Parents findByIdParents(int studentId);
 }

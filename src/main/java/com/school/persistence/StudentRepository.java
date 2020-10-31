@@ -15,11 +15,11 @@ public class StudentRepository {
         return (List<Student>) studentCrudRepository.findAll();
     }
 
-    public List<Student>getByProject(int projectId){
+    /*public List<Student>getByProject(int projectId){
         return studentCrudRepository.findByProjectId(projectId);
-    }
+    }*/
     public Student getByParents(int parentsId){
-        return studentCrudRepository.findByParentsId(parentsId);
+        return studentCrudRepository.findByParents(parentsId);
     }
 
     public Optional<Student> getStudent(int studentId){

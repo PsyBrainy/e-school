@@ -16,9 +16,9 @@ public class ProjectRepository {
         return (List<Project>) projectCrudRepository.findAll();
     }
 
-    public List<Project> getByStudent(int studentId){
-        return projectCrudRepository.findByStudentId(studentId);
-    }
+    //public List<Project> getByStudent(int studentId){
+    //    return projectCrudRepository.findByStudentId(studentId);
+    //}
 
     public Optional<Project> getProject(int projectId){
         return projectCrudRepository.findById(projectId);

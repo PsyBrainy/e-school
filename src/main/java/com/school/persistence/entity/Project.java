@@ -18,7 +18,8 @@ public class Project {
     private String nameProject;
     private Date limitDate;
 
-    @OneToMany(mappedBy = "students")
+    @ManyToMany
+    @JoinColumn(name = "students", insertable = false, updatable = false)
     private List<Student> students;
 
     public Project() {
@@ -32,14 +33,6 @@ public class Project {
 
     public Integer getProjectId() {
         return projectId;
-    }
-
-    public List<Student> getStudents() {
-        return students;
-    }
-
-    public void setStudents(List<Student> students) {
-        this.students = students;
     }
 
     public void setProjectId(Integer projectId) {
