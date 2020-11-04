@@ -8,9 +8,9 @@ import java.util.Optional;
 
 public interface ProyectoRepositorio {
 
-    List<Proyecto> setAll();
+    List<Proyecto> getAll();
 
-    List<Proyecto> getByAlumno(int idAlumno);
+    Optional<List<Proyecto>> getByAlumno(int idAlumno);
 
     Optional<Proyecto> getProyecto(int idProyecto);
 

@@ -7,6 +7,8 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
 
+import java.util.List;
+
 @Mapper(componentModel = "spring")
 public interface ParientesMapper {
 
@@ -20,6 +22,7 @@ public interface ParientesMapper {
             @Mapping(source = "student" , target = "alumno" )
     })
     Parientes toParientes(Parents parents);
+    List<Parientes> toParientesList(List<Parents> parents);
 
     @InheritInverseConfiguration
     Parents toParents(Parientes parientes);

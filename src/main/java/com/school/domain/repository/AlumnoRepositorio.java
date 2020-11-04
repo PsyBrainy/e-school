@@ -7,9 +7,9 @@ import java.util.Optional;
 
 public interface AlumnoRepositorio {
     List<Alumno> getAll();
-    List<Alumno> getByProyecto(int idProyecto);
+    Optional<List<Alumno>> getByProyecto(int idProyecto);
     Alumno getByParientes(int idParientes);
     Optional<Alumno> getAlumno(int idAlumno);
-    Alumno save();
+    Alumno save(Alumno alumno);
     void delete(int idAlumno);
 }

@@ -4,7 +4,6 @@ package com.school.persistence.entity;
 
 import javax.persistence.*;
 
-
 @Entity
 @Table(name = "parents")
 public class Parents {

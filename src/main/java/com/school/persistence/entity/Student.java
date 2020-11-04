@@ -1,6 +1,5 @@
 package com.school.persistence.entity;
 
-
 import javax.persistence.*;
 import java.util.List;
 
@@ -134,5 +133,13 @@ public class Student {
 
     public void setParents(Parents parents) {
         this.parents = parents;
+    }
+
+    public List<Project> getProjectsDelivered() {
+        return projectsDelivered;
+    }
+
+    public void setProjectsDelivered(List<Project> projectsDelivered) {
+        this.projectsDelivered = projectsDelivered;
     }
 }

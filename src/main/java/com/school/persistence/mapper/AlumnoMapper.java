@@ -7,6 +7,8 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
 
+import java.util.List;
+
 @Mapper(componentModel = "spring")
 public interface AlumnoMapper {
 
@@ -23,6 +25,7 @@ public interface AlumnoMapper {
             @Mapping(source = "projectsDelivered" , target = "proyectos" )
     })
     Alumno toAlumno(Student student);
+    List<Alumno> toAlumnos(List<Student> students);
 
     @InheritInverseConfiguration
     Student toStudent(Alumno alumno);

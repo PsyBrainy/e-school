@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface ProjectCrudRepository extends CrudRepository<Project,Integer> {
 
-    //List<Project> findByStudentId(int studentId);
+    List<Project> findByStudents(int studentId);
 }

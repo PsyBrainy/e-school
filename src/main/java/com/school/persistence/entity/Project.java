@@ -1,11 +1,8 @@
 package com.school.persistence.entity;
 
-
-
 import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
-
 
 @Entity
 @Table(name = "project")
@@ -17,6 +14,7 @@ public class Project {
 
     private String nameProject;
     private Date limitDate;
+    private Date submitDate;
 
     @ManyToMany
     @JoinColumn(name = "students", insertable = false, updatable = false)
@@ -53,5 +51,21 @@ public class Project {
 
     public void setLimitDate(Date limitDate) {
         this.limitDate = limitDate;
+    }
+
+    public List<Student> getStudents() {
+        return students;
+    }
+
+    public void setStudents(List<Student> students) {
+        this.students = students;
+    }
+
+    public Date getSubmitDate() {
+        return submitDate;
+    }
+
+    public void setSubmitDate(Date submitDate) {
+        this.submitDate = submitDate;
     }
 }
