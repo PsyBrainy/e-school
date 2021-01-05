@@ -1,7 +1,7 @@
 package com.school.persistence;
 
 import com.school.domain.Alumno;
-import com.school.domain.repository.PepeRepositorio;
+import com.school.domain.repository.AlumnoRepositorio;
 import com.school.persistence.crud.StudentCrudRepository;
 import com.school.persistence.entity.Student;
 import com.school.persistence.mapper.AlumnoMapper;
@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-public class StudentRepository implements PepeRepositorio {
+public class StudentRepository implements AlumnoRepositorio {
 
     @Autowired
     private StudentCrudRepository studentCrudRepository;

@@ -1,7 +1,7 @@
 package com.school.domain.service;
 
 import com.school.domain.Alumno;
-import com.school.domain.repository.PepeRepositorio;
+import com.school.domain.repository.AlumnoRepositorio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,7 +11,7 @@ import java.util.Optional;
 @Service
 public class AlumnoService {
     @Autowired
-    private PepeRepositorio alumnoRepositorio;
+    private AlumnoRepositorio alumnoRepositorio;
 
     public List<Alumno> getAll(){
         return alumnoRepositorio.getAll();
