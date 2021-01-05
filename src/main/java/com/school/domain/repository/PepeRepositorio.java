@@ -5,7 +5,7 @@ import com.school.domain.Alumno;
 import java.util.List;
 import java.util.Optional;
 
-public interface AlumnoRepositorio {
+public interface PepeRepositorio {
     List<Alumno> getAll();
     Optional<List<Alumno>> getByProyecto(int idProyecto);
     Alumno getByParientes(int idParientes);

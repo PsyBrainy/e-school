@@ -3,8 +3,7 @@ package com.school.web.controller;
 import com.school.domain.Alumno;
 import com.school.domain.service.AlumnoService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
@@ -15,6 +14,7 @@ public class AlumnoController {
     @Autowired
     private AlumnoService alumnoService;
 
+    @GetMapping()
     public List<Alumno> getAll(){
         return alumnoService.getAll();
     }
@@ -28,9 +28,13 @@ public class AlumnoController {
     public Alumno getByParientes(int idParientes){
         return alumnoService.getByParientes(idParientes);
     }
-    public Alumno save(Alumno alumno){
+
+    @PostMapping()
+    @ResponseBody
+    public Alumno save(@RequestBody Alumno alumno){
         return alumnoService.save(alumno);
     }
+
     public boolean delete(Integer idAlumno){
         return alumnoService.delete(idAlumno);
     }
