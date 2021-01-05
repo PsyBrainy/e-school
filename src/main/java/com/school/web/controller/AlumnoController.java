@@ -14,23 +14,27 @@ public class AlumnoController {
     @Autowired
     private AlumnoService alumnoService;
 
-    @GetMapping()
+    @GetMapping("/all")
     public List<Alumno> getAll(){
         return alumnoService.getAll();
     }
 
-    public Optional<Alumno> getAlumno(int idAlumno){
+    @GetMapping("/{id}")
+    public Optional<Alumno> getAlumno(@PathVariable("id") int idAlumno){
         return alumnoService.getAlumno(idAlumno);
     }
-    public Optional<List<Alumno>> getByProyecto(int idProyecto){
+
+    @GetMapping("/proyecto/seach/{idProyecto}")
+    public Optional<List<Alumno>> getByProyecto(@PathVariable("idProyecto") int idProyecto){
         return alumnoService.getByProyecto(idProyecto);
     }
-    public Alumno getByParientes(int idParientes){
+
+    @GetMapping("/parientes/seach/{idParientes}")
+    public Alumno getByParientes(@PathVariable("idParientes") int idParientes){
         return alumnoService.getByParientes(idParientes);
     }
 
-    @PostMapping()
-    @ResponseBody
+    @PostMapping("/save")
     public Alumno save(@RequestBody Alumno alumno){
         return alumnoService.save(alumno);
     }
